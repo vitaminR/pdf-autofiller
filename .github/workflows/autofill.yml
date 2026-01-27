@@ -1,0 +1,36 @@
+name: autofill
+on:
+  push:
+    paths:
+      - 'inbox/**'
+      - 'mappings/**'
+      - 'profile.yaml'
+      - 'fill_pdf.py'
+  workflow_dispatch:
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Fill PDFs from inbox
+        run: |
+          mkdir -p out
+          shopt -s nullglob
+          for pdf in inbox/*.pdf; do
+            base=$(basename "$pdf" .pdf)
+            map="mappings/${base}.yaml"
+            if [ -f "$map" ]; then
+              python fill_pdf.py --pdf "$pdf" --profile profile.yaml --map "$map" --out "out/${base}_filled.pdf"
+            else:
+              echo "No mapping for $pdf"
+            fi
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: filled-pdfs
+          path: out

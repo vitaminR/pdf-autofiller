@@ -1,0 +1,42 @@
+
+fields:
+  full_name:
+    source: profile.full_name
+    acro_field: "Name: Last, First, Middle Initial"
+    overlay: {page: 0, x: 100, y: 200}
+  rank_or_grade:
+    source: profile.rank_or_grade
+    acro_field: "Grade:"
+    overlay: {page: 0, x: 100, y: 250}
+  email_personal:
+    source: profile.email_personal
+    acro_field: "Email Address:"
+    overlay: {page: 0, x: 100, y: 600}
+  email_work:
+    source: profile.email_work
+    acro_field: "Email Address:"
+    overlay: {page: 0, x: 100, y: 650}
+  home:
+    source: profile.home
+    acro_field: "HOME INFORMATION"
+    overlay: {page: 0, x: 100, y: 300}
+  work:
+    source: profile.work
+    acro_field: "BUSINESS INFORMATION"
+    overlay: {page: 0, x: 100, y: 400}
+  emergency_contacts:
+    source: profile.emergency_contacts
+    acro_field: "EMERGENCY POINTS OF CONTACTS"
+    overlay: {page: 0, x: 100, y: 500}
+  consent_release:
+    source: profile.consent_release
+    acro_field: "I DO DO NOT GIVE CONSENT TO THE ABOVE INFORMATION BEING RELEASED WITHOUT MY PERMISSION"
+    overlay: {page: 0, x: 100, y: 700}
+  signature_name:
+    source: profile.signature_name
+    acro_field: "Signature:"
+    overlay: {page: 0, x: 100, y: 750}
+  signature_date:
+    source: profile.signature_date
+    acro_field: "Date::"
+    overlay: {page: 0, x: 300, y: 750}

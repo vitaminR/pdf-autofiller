@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Profile",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "home": {
+      "type": "object"
+    },
+    "work": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "full_name",
+    "home",
+    "work"
+  ]
+}
