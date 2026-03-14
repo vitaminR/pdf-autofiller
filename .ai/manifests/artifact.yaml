@@ -1,0 +1,24 @@
+# pdf-autofiller — Artifact Manifest (PRD8 Pilot)
+id: pdf-autofiller
+signature: "docs:generation:offline:fill-form"
+type: tool
+status: active
+
+version: "1.0.0"
+repo: "vitaminR/pdf-autofiller"
+path: "."
+
+pain_point:
+  description: "Military and government PDF forms require manual field-by-field entry, wasting hours per form cycle"
+  severity: 8
+  frequency: weekly
+
+modules: []
+depends_on: []
+
+usefulness_score: null
+last_scored: null
+
+created: "2026-01-15"
+created_by: human
+updated: "2026-03-13"
