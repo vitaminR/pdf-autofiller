@@ -1,0 +1,25 @@
+# CodePro Structure Mapping — pdf-autofiller
+version: 1
+repo: "vitaminR/pdf-autofiller"
+
+paths:
+  modules:
+    - "mappings/"
+  artifacts:
+    - path: "."
+      files: ["fill_pdf.py", "gen_map.py", "pdfctl.py", "ui_app.py"]
+  tests: []
+  docs: []
+  scripts: []
+  prds: []
+  manifests:
+    - ".ai/manifests/"
+
+dependency_rules:
+  enforced: false
+  notes: "Flat Python CLI tool. All source at root level."
+
+metadata:
+  primary_language: "python"
+  ci_system: "github-actions"
+  governed: true
